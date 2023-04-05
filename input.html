@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let arr1 = []
+        let result = [];
+        let start = 0
+        function showResult(start, arr1, k) {
+            
+            if (arr1.length === k) {
+                result.push(arr1.toString())
+            }
+            for (let i = start; i < arr.length; i++) {
+                arr1.push(arr[i]);
+                showResult(i + 1, arr1, k);
+                arr1.pop();
+            }
+            return result;
+        }
+        let arr = prompt('nhap array').split(',')
+        let k = +prompt('nhap k')
+        alert(showResult(start, arr1, k))
+        </script>
+</body>
+</html>
